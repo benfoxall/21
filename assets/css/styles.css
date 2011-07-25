@@ -1,0 +1,152 @@
+/* CSS Document - 21 Card Game - James Morris July 2011 */
+
+/*------------- Super classes ---------------*/
+
+body
+{
+  font-size: 120%;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #fff;
+}
+
+#page_wrapper
+{
+  width: 620px;
+  height: 940px;
+  padding: 10px;
+  background-color: #006600;
+  border: 1px solid #000;
+}
+
+h1
+{
+  font-size: 280%;
+}
+
+h2
+{
+  font-size: 220%;
+}
+
+h3
+{
+font-size: 180%;
+}
+
+/*------------- Content ---------------*/
+
+#content
+{
+  width: 100%;
+  height: 100%;
+}
+
+#playing_area
+{
+  width: 100%;
+  height: 85%;
+}
+
+#top_cards, #bottom_cards
+{
+  margin: 0 auto;
+  height: 50%;
+  width: 100%;
+}
+
+.card
+{
+  background-color: #F7F7F7;
+  border-radius: 4%;
+  box-shadow: 2px 2px 3px #1B552E;
+  color: #000000;
+  height: 85%;
+  margin-left: 4%;
+  padding: 2%;
+  width: 40%;
+}
+
+.top_letter, .bottom_letter
+{
+  width: 100%;
+  height: 10%;
+}
+
+.bottom_letter
+{
+  -webkit-transform: rotate(-180deg); 
+  -moz-transform: rotate(-180deg);	
+}
+
+.card img
+{
+  width: 100%;
+  height: 80%;
+  padding: 4%; 
+}
+
+#bottom_cards
+{
+  margin-top: 4%; 
+}
+
+/*=== Navigation ===*/
+nav
+{
+  margin: 0 !important;
+  height: 15%;
+  width: 100%;
+}
+
+
+/* ------------- Misc Utils --------------- */
+
+.minor
+{
+  font-size: 10px;
+}
+
+.upper
+{
+  text-transform: uppercase;
+}
+
+.left
+{
+  float: left;
+}
+
+.right
+{
+  float: right;
+}
+
+.clear_both
+{
+  clear: both;
+}
+
+.hidden
+{
+  display: none;
+}
+
+.hide_text
+{
+  display: block;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -9999px;
+}
+
+.bold
+{
+  font-weight: bold;
+}
+
+.strike
+{
+  text-decoration: line-through;
+}
