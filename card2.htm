@@ -11,12 +11,25 @@
 	<style type="text/css" media="screen">
 	html {
         height: 100%;
+        overflow:hidden;
     }
     body {
         height: 100%;
         background-repeat: no-repeat;
         font-size:300%;
-    	background-image: -webkit-linear-gradient(#025728, #619F7E);
+		background-color:#025728;
+		background-image: -webkit-gradient(
+		    linear,
+		    left bottom,
+		    left top,
+		    color-stop(0, #025728),
+		    color-stop(1, #619F7E)
+		);
+		background-image: -moz-linear-gradient(
+		    center bottom,
+		    #025728 0%,
+		    #619F7E 99%
+		);
 	    font-family: 'Oswald', sans-serif;
     }
     a{
@@ -67,12 +80,11 @@
         font-size:.5em;
         margin:auto;
         width:15em;
-        position:relative;
-        border: 1px solid #f08;
    	   }
 	   
 	   #options, #solutions{
-	       top:0;
+           position:fixed;
+	       top:25em;
            width:15em;
            height:25em;
 	       position:absolute;
@@ -81,7 +93,11 @@
           -moz-border-radius: .25em;
           border-radius: .25em;
   	       background-color:rgba(0,0,0,0.65);
-  	       -webkit-transition: margin-top .5s ease-in-out;
+	       -webkit-transition: top .5s ease-in-out;
+	       -moz-transition: top .5s ease-in-out;
+  	       height:0;
+  	       overflow:hidden;
+           height:25em;
 	   }
 	   
 	   #options > li{
@@ -110,9 +126,19 @@
 	   }
 	   
 	   #options.active, #solutions.active{
-         margin-top:-25em;
+            top:2em;
+            padding-top:0.5em;
 	   }
 	   
+	   nav{
+	       position:fixed;
+	       bottom:0;
+	       background-color:#ccc;
+	       z-index:200;
+	   }
+	   nav a{
+	       	       color:#000;
+	   }
 	   
 	</style>
 	
