@@ -160,3 +160,135 @@ nav
 {
   text-decoration: line-through;
 }
+
+
+
+/** Hacked in styles by ben */
+html {
+    height: 100%;
+    overflow:hidden;
+}
+body {
+    height: 100%;
+    background-repeat: no-repeat;
+    font-size:300%;
+	background-color:#025728;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #025728),
+	    color-stop(1, #619F7E)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #025728 0%,
+	    #619F7E 99%
+	);
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    color:#ccc;
+}
+h1{
+    color:#0F4024; 
+    text-shadow: #40372F 0px 2px 1px;
+    text-transform:uppercase;
+    font-size:1.5em;
+    margin-bottom:.5em;;
+}
+
+.cards li
+{
+    background-color: #F7F7F7;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    border-radius: .25em;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.35);
+    color: #000000;
+    height: 4em;
+    width: 2.5em;
+    padding:.25em;
+    margin:.25em;
+    display:inline-block;
+    text-align:left;
+    overflow:hidden;
+}
+
+
+.cards li .flip{
+    display:block;
+    -webkit-transform: rotate(-180deg); 
+    -moz-transform: rotate(-180deg);    
+    height:3em;
+}
+#table{
+    font-size:1em;
+    width:8em;
+    margin:auto;
+}
+
+
+#panels{
+ font-size:.5em;
+ margin:auto;
+ width:15em;
+}
+
+#options, #solutions{
+    position:fixed;
+    top:25em;
+    width:15em;
+    height:25em;
+    position:absolute;
+    padding-top:.5em;
+   -webkit-border-radius: .25em;
+   -moz-border-radius: .25em;
+   border-radius: .25em;
+    background-color:rgba(0,0,0,0.65);
+    -webkit-transition: top .5s ease-in-out;
+    -moz-transition: top .5s ease-in-out;
+    height:0;
+    overflow:hidden;
+    height:25em;
+}
+
+#options > li{
+    float:left;
+    width:3em;
+    height:5em;
+    text-align:center;
+    padding-left:.5em;
+    cursor: pointer;
+}
+#options > li.multiple{
+    width:9em;
+    padding-left:.75em;
+}
+
+#options li:hover .cards li{
+    background-color:#FDFDC0;
+}
+
+#solutions li{
+    font-family:helvetica, arial, sans-serif;
+    font-size:1.5em;
+    letter-spacing:.3em;
+    line-height:1.4em;
+    color:#fff;
+}
+
+#options.active, #solutions.active{
+     top:2em;
+     padding-top:0.5em;
+}
+
+nav{
+    position:fixed;
+    bottom:0;
+    background-color:#ccc;
+    z-index:200;
+}
+nav a{
+    	       color:#000;
+}
