@@ -1,49 +1,59 @@
-/* CSS Document - 21 Card Game - James Morris July 2011 */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
 
-html, body, div, span, applet, object, iframe,
+html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+
+
+body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+select, input, textarea, button { font:99% sans-serif; }
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/**
+ * Minimal base styles.
+ */
+
+/* Prevent mobile zooming while remain desktop zooming: github.com/shichuan/mobile-html5-boilerplate/issues/closed#issue/14 */
+html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } 
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+li{
+	list-style:none;
+}
 
 /*------------- Super classes ---------------*/
 
@@ -81,20 +91,6 @@ ul{
   border: 1px solid #000;
 }
 
-h1
-{
-  font-size: 280%;
-}
-
-h2
-{
-  font-size: 220%;
-}
-
-h3
-{
-font-size: 180%;
-}
 
 /*------------- Content ---------------*/
 
@@ -167,11 +163,13 @@ nav
 html {
     height: 100%;
     overflow:hidden;
+	width:100%;
 }
 body {
     height: 100%;
+	width:100%;
     background-repeat: no-repeat;
-    font-size:300%;
+    font-size:200%;
 	background-color:#025728;
 	background-image: -webkit-gradient(
 	    linear,
@@ -185,6 +183,7 @@ body {
 	    #025728 0%,
 	    #619F7E 99%
 	);
+	-webkit-background-size:150% 100%;
     font-family: 'Oswald', sans-serif;
 }
 a{
@@ -194,7 +193,7 @@ h1{
     color:#0F4024; 
     text-shadow: #40372F 0px 2px 1px;
     text-transform:uppercase;
-    font-size:1.5em;
+    font-size:1em;
     margin-bottom:.5em;;
 }
 
@@ -223,7 +222,7 @@ h1{
     height:3em;
 }
 #table{
-    font-size:1em;
+    font-size:.75em;
     width:8em;
     margin:auto;
 }
@@ -237,7 +236,7 @@ h1{
 
 #options, #solutions{
     position:fixed;
-    top:25em;
+    top:-26em;
     width:15em;
     height:25em;
     position:absolute;
@@ -279,7 +278,7 @@ h1{
 }
 
 #options.active, #solutions.active{
-     top:2em;
+     top:1em;
      padding-top:0.5em;
 }
 
@@ -290,5 +289,22 @@ nav{
     z-index:200;
 }
 nav a{
-    	       color:#000;
+	color:#000;
+	font-size:.5em;
+}
+
+
+@media screen and (orientation:landscape) {
+	#table{
+		font-size:.7em;
+		width:16em;
+	}
+	
+	#panels{
+		width:30em;
+	}
+	
+	#options, #solutions{
+			width:30em;
+	}
 }
