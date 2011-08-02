@@ -1,8 +1,6 @@
 <!doctype html>
-<!-- Conditional comment for mobile ie7 http://blogs.msdn.com/b/iemobile/ -->
-<!-- Appcache Facts http://appcachefacts.info/ -->
-<!--[if IEMobile 7 ]>    <html class="no-js iem7" manifest="default.appcache?v=1"> <![endif]-->
-<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" manifest="default.appcache?v=1"> <!--<![endif]-->
+
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -27,9 +25,9 @@
   <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
   
   <!--iOS web app, deletable if not needed -->
-  <!--<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="apple-touch-startup-image" href="img/l/splash.png">-->
+  <link rel="apple-touch-startup-image" href="img/l/splash.png">
   
   <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
   <meta http-equiv="cleartype" content="on">
@@ -105,10 +103,10 @@
     
     
 	<ul id="table" class="cards">
-		<li>&nbsp;</li>
-		<li>&nbsp;</li>
-		<li>&nbsp;</li>
-		<li>&nbsp;</li>
+		<li id="card-1"></li>
+		<li id="card-2"></li>
+		<li id="card-3"></li>
+		<li id="card-4"></li>
 	</ul>
 	
 	<nav>
@@ -119,42 +117,6 @@
 	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script> 
-	<script type="text/javascript" charset="utf-8">
-
-	
-	    //a helper to set the content of a card
-	    $.fn.card = function(value){
-	        this.each(function(){
-	            var v = value || $(this).text();
-	            $(this).html(v + '<span class="flip">' + v + '</span>')
-	        })
-	    }
-	    
-	    $('.cards > li').card();
-	
-		
-		$('.multiple .cards').each(function(){
-		    $('li', this).each(function(i){
-                $(this).css({position:'absolute',marginLeft:i + 'em',zIndex:100-i});
-		    });
-		});
-		
-        $('.options > li').click(function(){
-            $(this).addClass('selected');
-            var count = $(this).data('select-count') || 0;
-            $(this).data('select-count', count+1);
-        });
-        
-        $('nav a').click(function(e){
-            e.preventDefault();
-            var selector = $(this).attr('href');
-            
-            $(selector).toggleClass('active')
-                    .siblings().removeClass('active');
-        })
-        function page_Load() {
-           setTimeout(function() { window.scrollTo(0, 1); }, 100);
-         }        
-	</script>
+	<script src="assets/js/card_game.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
