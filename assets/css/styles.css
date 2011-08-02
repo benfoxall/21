@@ -167,7 +167,7 @@ h1{
     margin-bottom:.5em;;
 }
 
-.cards li
+.cards li, #c1, #c2, #c3
 {
     background-color: #F7F7F7;
     -webkit-border-radius: .25em;
@@ -183,6 +183,44 @@ h1{
     text-align:left;
     overflow:hidden;
 }
+
+#c1, #c2, #c3
+{
+  width: 1.1em !important;
+  height: 1.9em !important;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+#c1
+{
+  left: 0.8em;
+  position: relative;
+  top: 0.3em;
+  -webkit-transform: rotate(-13deg); 
+  -moz-transform: rotate(-13deg);
+  z-index: 30;   
+}
+
+#c2
+{
+  left: -0em;
+  position: relative;
+  top: 0.3em;
+  -webkit-transform: rotate(8deg); 
+  -moz-transform: rotate(8deg);
+  z-index: 20;   
+}
+
+#c3
+{ 
+  left: -1em;
+  position: relative;
+  top: 0.6em;
+  -webkit-transform: rotate(34deg); 
+  -moz-transform: rotate(34deg);
+  z-index: 10;   
+}
+
 
 
 .cards li .flip{
@@ -261,17 +299,100 @@ nav{
     bottom:0;
     background-color:#ccc;
     z-index:200;
-width:100%;
-padding:0;
+    width:100%;
+    padding:0;
 }
-nav a{
-	color:#000;
+nav a span{
+	width: 50%;
+  color:#fff;
 	font-size:.5em;
 	line-height:1.4em;
 	display:inline-block;
-	
+	height: 5em;
+}
+#solution_btn.menu_btn_na
+{
+  border-top: 2px solid #bababa;
+  box-shadow: 0px -2px 0 0px #000;
+	background-color:#808080;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #808080),
+	    color-stop(1, #272727)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #272727 0%,
+	    #808080 99%
+	);
 }
 
+.menu_btn_na .circle
+{
+  color: #808080;
+}
+
+.menu_btn_on
+{
+  border-top: 2px solid #85b09c;
+  box-shadow: 2px -2px 0 0px #000;  
+	background-color:#006837;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #006837),
+	    color-stop(1, #001f10)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #001f10 0%,
+	    #006837 99%
+	);
+
+}
+
+.menu_btn_on .circle
+{
+  color: #006837;
+}
+
+.menu_btn_active
+{ 
+  border-top: 2px solid #d49698;
+  box-shadow: 2px -2px 0 0px #000;  
+	background-color:#c1272d;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0, #c1272d),
+	    color-stop(1, #3a0c0e)
+	);
+	background-image: -moz-linear-gradient(
+	    center bottom,
+	    #3a0c0e 0%,
+	    #c1272d 99%
+	);
+
+}
+
+.menu_btn_active .circle
+{
+  color: #c1272d;
+}
+
+.circle
+{
+  border-radius: 20em;
+  width: 2em;
+  height: 2em;
+  background-color: #fff;
+  margin: .5em auto;
+  line-height: 2;
+}
 
 @media screen and (orientation:landscape) {
 	#table{
